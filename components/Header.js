@@ -16,7 +16,7 @@ const Header = ({ title, navigation }) => {
             <Feather name="menu" size={25} color="#0f6abf" />
           </TouchableOpacity>
           <View>
-            <Text style={{ color: '#0f6abf' }}>{title}</Text>
+            <Text style={{ color: '#0f6abf',fontSize:19 }}>{title}</Text>
           </View>
           <TouchableOpacity
            
@@ -35,8 +35,8 @@ export default Header;
 
 const styles = StyleSheet.create({
   container: {
-    paddingTop: 10,
-    paddingBottom: 15,
+    paddingTop: 20,
+    paddingBottom: 20,
     paddingHorizontal: 10,
     backgroundColor: '#fff',
   },

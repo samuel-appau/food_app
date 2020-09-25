@@ -22,7 +22,7 @@ export default function App(props) {
   } else {
     return (
       <View style={styles.container}>
-        <StatusBar barStyle="light-content" />
+        <StatusBar style="auto" />
         
             <NavigationContainer>
               {isLoggedIn ? (
