@@ -13,6 +13,7 @@ import useCachedResources from './hooks/useCachedResources';
 import MainApp from './navigation/MainApp';
 import AuthNavigator from './navigation/AuthNavigator';
 
+
 export default function App(props) {
   const [isLoggedIn, setIsLoggedIn] = React.useState(true);
   const isLoadingComplete = useCachedResources();
@@ -23,7 +24,7 @@ export default function App(props) {
     return (
       <View style={styles.container}>
         <StatusBar style="auto" />
-        
+         
             <NavigationContainer>
               {isLoggedIn ? (
              
@@ -35,6 +36,7 @@ export default function App(props) {
                 <AuthNavigator />
               )}
             </NavigationContainer>
+            
         
       </View>
     );

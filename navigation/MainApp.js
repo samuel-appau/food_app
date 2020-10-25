@@ -3,12 +3,9 @@ import * as React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { createStackNavigator } from '@react-navigation/stack';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { MaterialCommunityIcons,Ionicons } from '@expo/vector-icons';
 import HomeScreen from '../screens/HomeScreen';
-import AccountScreen from '../screens/AccountScreen';
-import NotificationScreen from '../screens/NotificationScreen';
-import TaskScreen from '../screens/TaskScreen';
-import ViewTaskScreen from '../screens/ViewTaskScreen';
+import CartScreen from '../screens/CartScreen';
 import SettingsScreen from '../screens/SettingsScreen'
 
 const Drawer = createDrawerNavigator();
@@ -25,10 +22,12 @@ export const MenuDrawer = () => {
 
 
 
+
+
 const MainApp = () => {
   return (
     <BottomTab.Navigator
-      initialRouteName="Task"
+      initialRouteName="Home"
       tabBarOptions={{
         activeTintColor: '#fff',
         inactiveTintColor: '#a9acb0',
@@ -37,53 +36,31 @@ const MainApp = () => {
       }}
     >
     <BottomTab.Screen
-        name="Task"
-        component={TaskScreen}
-        options={{
-          tabBarIcon: ({ focused, color }) => (
-            <MaterialCommunityIcons name="view-dashboard-variant" size={30} color={color} />
-          ),
-        }}
-      />
-      <BottomTab.Screen
-        name="Notification"
-        component={NotificationScreen}
-        options={{
-          tabBarIcon: ({ focused, color }) => (
-            <MaterialCommunityIcons name="bell" size={30} color={color} />
-          ),
-        }}
-      />
-      <BottomTab.Screen
-        name="AddTask"
+        name="Home"
         component={HomeScreen}
         options={{
           tabBarIcon: ({ focused, color }) => (
-            <MaterialCommunityIcons
-              name="plus-circle"
-              size={50}
-              color='#303030'
-            />
+            <Ionicons name="ios-home" size={25} color={color} />
           ),
-          title: '',
         }}
       />
       <BottomTab.Screen
-        name="Account"
-        component={AccountScreen}
+        name="Cart"
+        component={CartScreen}
         options={{
           tabBarIcon: ({ focused, color }) => (
-            <MaterialCommunityIcons name="account" size={30} color={color} />
+            
+            <Ionicons name="ios-cart" size={25} color={color}/>
+          
           ),
         }}
       />
-
       <BottomTab.Screen
         name="Settings"
         component={SettingsScreen}
         options={{
           tabBarIcon: ({ focused, color }) => (
-            <MaterialCommunityIcons name="settings" size={30} color={color} />
+            <MaterialCommunityIcons name="settings" size={25} color={color} />
           ),
         }}
       />

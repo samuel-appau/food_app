@@ -6,7 +6,7 @@ import { Ionicons, AntDesign, FontAwesome } from '@expo/vector-icons';
 const SettingsScreen = () => {
     return (
         <View>
-            <Header title="MelloTasks" />
+            <Header title="Settings" />
             <Text>SettingsScreen</Text>
         </View>
     );
