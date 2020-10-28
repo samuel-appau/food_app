@@ -29,9 +29,9 @@ const MainApp = () => {
     <BottomTab.Navigator
       initialRouteName="Home"
       tabBarOptions={{
-        activeTintColor: '#fff',
+        activeTintColor: '#0f6abf',
         inactiveTintColor: '#a9acb0',
-        tabStyle: { backgroundColor: '#0f6abf' },
+        tabStyle: { backgroundColor: '#fff' },
         keyboardHidesTabBar: true,
       }}
     >
